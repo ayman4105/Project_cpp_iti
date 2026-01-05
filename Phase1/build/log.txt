@@ -1,0 +1,1 @@
+[app] [2026-01-05 17:34:24] [context] [Debug] [message]
