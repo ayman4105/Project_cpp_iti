@@ -3,7 +3,7 @@
 #include <vector>
 #include <memory>
 #include "../Include/LogMessage.hpp"
-#include "../Include/ILogSink.hpp"
+#include "../Include/sinks/ILogSink.hpp"
 
 
 class LogManager

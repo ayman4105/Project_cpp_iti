@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/ITI_cpp.dir/Source/FileSinkImpl.cpp.o CMakeFiles/ITI_cpp.dir/Source/LogManager.cpp.o CMakeFiles/ITI_cpp.dir/Source/LogMessage.cpp.o CMakeFiles/ITI_cpp.dir/Source/ConsoleSinkImpl.cpp.o CMakeFiles/ITI_cpp.dir/main.cpp.o -o ITI_cpp 

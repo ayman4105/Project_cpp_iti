@@ -6,10 +6,14 @@ project(ITI_cpp)
 
 add_executable(
     ${PROJECT_NAME}
-    Source/FileSinkImpl.cpp
+    Source/sinks/FileSinkImpl.cpp
     Source/LogManager.cpp
     Source/LogMessage.cpp
-    Source/ConsoleSinkImpl.cpp
+    Source/sinks/ConsoleSinkImpl.cpp
+    Source/safe/SafeFile.cpp
+    Source/safe/SafeSocket.cpp
+    Source/telemetry/FileTelemetrySourceImpl.cpp
+    Source/telemetry/SocketTelemetrySourceImpl.cpp
     main.cpp
 )
 
