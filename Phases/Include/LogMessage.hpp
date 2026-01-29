@@ -5,25 +5,22 @@
 #include <ctime>
 #include <iomanip>
 #include <iostream>
+#include "Types_of_enums_data/severity_type.hpp"
+#include"magic_enum/magic_enum.hpp"
 
-enum class severity{
-    debug,
-    info,
-    warning,
-    error
-};
+
 
 class LogMessage
 {
   
 public:
-    severity level;
+    severity_level level;
     std::string app_name;
-    std::chrono::time_point<std::chrono::system_clock> time;
+    std::string time;
     std::string message;
     std::string context;
 
-    LogMessage(const std::string& app, const std::string& cntxt, const std::string& msg, severity sev, std::chrono::system_clock::time_point time = std::chrono::system_clock::now());
+    LogMessage(const std::string& app, const std::string& cntxt, const std::string& msg, severity_level sev, std::string time);
     ~LogMessage()= default;
     std::string get_level() const;
 };

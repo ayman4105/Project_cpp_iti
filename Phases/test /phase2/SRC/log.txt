@@ -1,0 +1,3 @@
+[12:00][ERROR][App1][Init]Something went wrong
+[12:00][ERROR][App1][Init]Something went wrong
+[12:01][INFO][App1][Run]Application started

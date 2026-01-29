@@ -34,5 +34,3 @@ public:
 
     ~SafeSocket();
 };
-
-// to run socket write in terminal nc -l 12345

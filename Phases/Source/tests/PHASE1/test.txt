@@ -26,18 +26,16 @@
 
 int main()
 {
+    LogManager manager;
+    manager.add_sink(std::make_unique<ConsoleSinkImpl>());
+    manager.add_sink(std::make_unique<FileSinkImpl>("log.txt"));
+    std::cout<< "reached print\n";
+    manager << LogMessage("app", "context", "message",severity::debug);
 
 
+    
 
-    std::string raw_value = "99";
 
-    auto log_opt = Formatter<CPU_policy>::format(raw_value);
-
-    if (log_opt.has_value()) {
-        std::cout << log_opt.value() << std::endl;
-    } else {
-        std::cout << "Failed to parse telemetry data." << std::endl;
-    }
     
     return 0;
 }

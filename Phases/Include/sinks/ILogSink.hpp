@@ -1,5 +1,5 @@
 #pragma once 
-#include"../Include/LogMessage.hpp"
+#include"../../Include/LogMessage.hpp"
 
 
 class ILogSink

@@ -1,0 +1,29 @@
+#include "../INC/ITelemetrySource.hpp"
+#include "../INC/FileTelemetrySocket.hpp"
+#include <iostream>
+#include <memory>
+#include <string>
+// to run socket write in terminal nc -l 12345
+
+int main() {
+    std::unique_ptr<ITelemetrySource> source;
+
+    source = std::make_unique<SocketTelemetrySrc>("127.0.0.1", 12345);
+
+    if (source->open_source()) {
+        std::cout << "Socket source opened successfully!\n";
+
+        std::string line;
+        while (source->read_source(line)) {
+            std::cout << "Received: " << line << "\n";
+        }
+
+        std::cout << "Finished reading.\n";
+    } else {
+        std::cout << "Failed to open socket source.\n";
+    }
+
+    return 0;
+}
+
+//not same /////////////////////

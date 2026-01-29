@@ -29,7 +29,7 @@ int main()
 
 
 
-    std::string raw_value = "99";
+    std::string raw_value = "82.5";
 
     auto log_opt = Formatter<CPU_policy>::format(raw_value);
 
