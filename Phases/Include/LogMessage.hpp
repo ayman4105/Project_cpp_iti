@@ -1,18 +1,16 @@
-#pragma once 
+#pragma once
 
-#include<string>
-#include<chrono>
+#include <string>
+#include <chrono>
 #include <ctime>
 #include <iomanip>
 #include <iostream>
 #include "Types_of_enums_data/severity_type.hpp"
-#include"magic_enum/magic_enum.hpp"
-
-
+#include "magic_enum/magic_enum.hpp"
 
 class LogMessage
 {
-  
+
 public:
     severity_level level;
     std::string app_name;
@@ -20,10 +18,8 @@ public:
     std::string message;
     std::string context;
 
-    LogMessage(const std::string& app, const std::string& cntxt, const std::string& msg, severity_level sev, std::string time);
-    ~LogMessage()= default;
-    std::string get_level() const;
+    LogMessage(const std::string &app, const std::string &cntxt, const std::string &msg, severity_level sev, std::string time);
+    ~LogMessage() = default;
 };
 
-    std::ostream& operator<<(std::ostream& os, const LogMessage& msg);
-
+std::ostream &operator<<(std::ostream &os, const LogMessage &msg);

@@ -9,7 +9,8 @@
 #include <cstring>
 #include <iostream>
 
-class SafeSocket {
+class SafeSocket
+{
 public:
     using string = std::string;
 
@@ -19,18 +20,18 @@ private:
     uint16_t portNumber;
 
 public:
-    SafeSocket(const string& ip, uint16_t port);
-    
-    bool sendString(const string& message);
-    bool receiveLine(string& out); // read until '\n'
+    SafeSocket(const string &ip, uint16_t port);
+
+    bool sendString(const string &message);
+    bool receiveLine(string &out); // read until '\n'
 
     // move semantics
-    SafeSocket(SafeSocket&& other) noexcept;
-    SafeSocket& operator=(SafeSocket&& other) noexcept;
+    SafeSocket(SafeSocket &&other) noexcept;
+    SafeSocket &operator=(SafeSocket &&other) noexcept;
 
     // disable copy
-    SafeSocket(const SafeSocket&) = delete;
-    SafeSocket& operator=(const SafeSocket&) = delete;
+    SafeSocket(const SafeSocket &) = delete;
+    SafeSocket &operator=(const SafeSocket &) = delete;
 
     ~SafeSocket();
 };

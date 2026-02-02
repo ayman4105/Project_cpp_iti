@@ -1,6 +1,7 @@
-#pragma once 
+#pragma once
 
-enum class severity_level{
+enum class severity_level
+{
     Warning,
     Critical,
     Info
