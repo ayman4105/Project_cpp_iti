@@ -1,4 +1,4 @@
-#include "../Include/LogMessage.hpp"
+#include "LogMessage.hpp"
 
 LogMessage::LogMessage(const std::string &app, const std::string &cntxt, const std::string &msg, severity_level sev, std::string time)
     : app_name(app), context(cntxt), message(msg), level(sev), time(time)

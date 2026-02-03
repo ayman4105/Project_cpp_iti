@@ -2,8 +2,8 @@
 
 #include <string_view>
 
-#include "../Types_of_enums_data/severity_type.hpp"
-#include "../Types_of_enums_data/telemetry_source.hpp"
+#include "Types_of_enums_data/severity_type.hpp"
+#include "Types_of_enums_data/telemetry_source.hpp"
 
 struct GPU_policy
 {

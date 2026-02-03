@@ -1,7 +1,7 @@
-#include"../../Include/sinks/ConsoleSinkImpl.hpp"
+#include "sinks/ConsoleSinkImpl.hpp"
 #include <iostream>
 
-
-void ConsoleSinkImpl::write(const LogMessage& message) {
-    std::cout<<message;
+void ConsoleSinkImpl::write(const LogMessage &message)
+{
+    std::cout << message;
 }

@@ -1,7 +1,7 @@
 #pragma onces
 
-#include "../../Include/telemetry/ITelemetrySource.hpp"
-#include "../../Include/safe/SafeSocket.hpp"
+#include "telemetry/ITelemetrySource.hpp"
+#include "safe/SafeSocket.hpp"
 
 class SocketTelemetrySrc : public ITelemetrySource
 {

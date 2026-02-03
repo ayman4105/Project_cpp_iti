@@ -1,4 +1,4 @@
-#include "../Include/LogManager.hpp"
+#include "LogManager.hpp"
 
 void LogManager::add_sink(std::unique_ptr<ILogSink> sink)
 {
@@ -7,7 +7,7 @@ void LogManager::add_sink(std::unique_ptr<ILogSink> sink)
 
 void LogManager::log(const LogMessage &message)
 {
-    
+
     if (!messages.tryPush(message))
     {
         std::cout << "[LogManager] buffer full, message dropped\n";
