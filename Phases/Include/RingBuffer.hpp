@@ -57,8 +57,8 @@ public:
         if (count == 0)
             return std::nullopt;
 
-        T item = buffer[read_index].value(); // استخراج القيمة
-        buffer[read_index].reset();          // فرغ المكان بعد القراءة
+        T item = buffer[read_index].value(); 
+        buffer[read_index].reset();          
         read_index = (read_index + 1) % capacity;
         --count;
         return item;
