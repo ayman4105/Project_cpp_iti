@@ -5,6 +5,7 @@ CMakeFiles/ITI_cpp.dir/Source/LogManager.cpp.o: /home/ayman/ITI/Project_cpp_iti/
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/LogManager.hpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/LogMessage.hpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/RingBuffer.hpp \
+  /home/ayman/ITI/Project_cpp_iti/Phases/Include/ThreadPool.hpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/Types_of_enums_data/severity_type.hpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/magic_enum/magic_enum.hpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/sinks/ILogSink.hpp \
@@ -13,6 +14,7 @@ CMakeFiles/ITI_cpp.dir/Source/LogManager.cpp.o: /home/ayman/ITI/Project_cpp_iti/
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \
   /usr/include/c++/13/array \
+  /usr/include/c++/13/atomic \
   /usr/include/c++/13/backward/auto_ptr.h \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
@@ -35,6 +37,7 @@ CMakeFiles/ITI_cpp.dir/Source/LogManager.cpp.o: /home/ayman/ITI/Project_cpp_iti/
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13/bits/deque.tcc \
   /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
@@ -79,16 +82,19 @@ CMakeFiles/ITI_cpp.dir/Source/LogManager.cpp.o: /home/ayman/ITI/Project_cpp_iti/
   /usr/include/c++/13/bits/std_abs.h \
   /usr/include/c++/13/bits/std_function.h \
   /usr/include/c++/13/bits/std_mutex.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algo.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
+  /usr/include/c++/13/bits/stl_deque.h \
   /usr/include/c++/13/bits/stl_function.h \
   /usr/include/c++/13/bits/stl_heap.h \
   /usr/include/c++/13/bits/stl_iterator.h \
   /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/13/bits/stl_iterator_base_types.h \
   /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_queue.h \
   /usr/include/c++/13/bits/stl_raw_storage_iter.h \
   /usr/include/c++/13/bits/stl_relops.h \
   /usr/include/c++/13/bits/stl_tempbuf.h \
@@ -98,6 +104,7 @@ CMakeFiles/ITI_cpp.dir/Source/LogManager.cpp.o: /home/ayman/ITI/Project_cpp_iti/
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
   /usr/include/c++/13/bits/uniform_int_dist.h \
   /usr/include/c++/13/bits/unique_lock.h \
   /usr/include/c++/13/bits/unique_ptr.h \
@@ -122,6 +129,7 @@ CMakeFiles/ITI_cpp.dir/Source/LogManager.cpp.o: /home/ayman/ITI/Project_cpp_iti/
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
+  /usr/include/c++/13/deque \
   /usr/include/c++/13/exception \
   /usr/include/c++/13/ext/aligned_buffer.h \
   /usr/include/c++/13/ext/alloc_traits.h \
@@ -147,6 +155,7 @@ CMakeFiles/ITI_cpp.dir/Source/LogManager.cpp.o: /home/ayman/ITI/Project_cpp_iti/
   /usr/include/c++/13/pstl/execution_defs.h \
   /usr/include/c++/13/pstl/glue_memory_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/queue \
   /usr/include/c++/13/ratio \
   /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
@@ -154,6 +163,7 @@ CMakeFiles/ITI_cpp.dir/Source/LogManager.cpp.o: /home/ayman/ITI/Project_cpp_iti/
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
   /usr/include/c++/13/system_error \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
@@ -1415,8 +1425,8 @@ CMakeFiles/ITI_cpp.dir/Source/sinks/FileSinkImpl.cpp.o: /home/ayman/ITI/Project_
 
 CMakeFiles/ITI_cpp.dir/Source/telemetry/FileTelemetrySourceImpl.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/Source/telemetry/FileTelemetrySourceImpl.cpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/safe/SafeFile.hpp \
-  /home/ayman/ITI/Project_cpp_iti/Phases/Include/telemetry/ITelemetrySource.hpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/telemetry/FileTelemetrySourceImpl.hpp \
+  /home/ayman/ITI/Project_cpp_iti/Phases/Include/telemetry/ITelemetrySource.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -1847,22 +1857,22 @@ CMakeFiles/ITI_cpp.dir/Source/telemetry/SocketTelemetrySourceImpl.cpp.o: /home/a
 CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.cpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/Formatter.hpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/LogManager.hpp \
+  /home/ayman/ITI/Project_cpp_iti/Phases/Include/LogMessage.hpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/RingBuffer.hpp \
-  /home/ayman/ITI/Project_cpp_iti/Phases/Include/magic_enum/magic_enum.hpp \
+  /home/ayman/ITI/Project_cpp_iti/Phases/Include/ThreadPool.hpp \
+  /home/ayman/ITI/Project_cpp_iti/Phases/Include/Types_of_enums_data/severity_type.hpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/Types_of_enums_data/telemetry_source.hpp \
+  /home/ayman/ITI/Project_cpp_iti/Phases/Include/magic_enum/magic_enum.hpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/policy/CPU_policy.hpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/policy/GPU_policy.hpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/policy/RAM_policy.hpp \
-  /home/ayman/ITI/Project_cpp_iti/Phases/Include/LogMessage.hpp \
-  /home/ayman/ITI/Project_cpp_iti/Phases/Include/Types_of_enums_data/severity_type.hpp \
-  /home/ayman/ITI/Project_cpp_iti/Phases/Include/magic_enum/magic_enum.hpp \
+  /home/ayman/ITI/Project_cpp_iti/Phases/Include/safe/SafeFile.hpp \
+  /home/ayman/ITI/Project_cpp_iti/Phases/Include/safe/SafeSocket.hpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/sinks/ConsoleSinkImpl.hpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/sinks/FileSinkImpl.hpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/sinks/ILogSink.hpp \
-  /home/ayman/ITI/Project_cpp_iti/Phases/Include/safe/SafeFile.hpp \
-  /home/ayman/ITI/Project_cpp_iti/Phases/Include/safe/SafeSocket.hpp \
-  /home/ayman/ITI/Project_cpp_iti/Phases/Include/telemetry/ITelemetrySource.hpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/telemetry/FileTelemetrySourceImpl.hpp \
+  /home/ayman/ITI/Project_cpp_iti/Phases/Include/telemetry/ITelemetrySource.hpp \
   /home/ayman/ITI/Project_cpp_iti/Phases/Include/telemetry/SocketTelemetrySourceImpl.hpp \
   /usr/include/alloca.h \
   /usr/include/arpa/inet.h \
@@ -1874,6 +1884,7 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
   /usr/include/asm-generic/sockios.h \
   /usr/include/assert.h \
   /usr/include/c++/13/array \
+  /usr/include/c++/13/atomic \
   /usr/include/c++/13/backward/auto_ptr.h \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
@@ -1896,6 +1907,7 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13/bits/deque.tcc \
   /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
@@ -1941,16 +1953,19 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
   /usr/include/c++/13/bits/std_abs.h \
   /usr/include/c++/13/bits/std_function.h \
   /usr/include/c++/13/bits/std_mutex.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algo.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
+  /usr/include/c++/13/bits/stl_deque.h \
   /usr/include/c++/13/bits/stl_function.h \
   /usr/include/c++/13/bits/stl_heap.h \
   /usr/include/c++/13/bits/stl_iterator.h \
   /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/13/bits/stl_iterator_base_types.h \
   /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_queue.h \
   /usr/include/c++/13/bits/stl_raw_storage_iter.h \
   /usr/include/c++/13/bits/stl_relops.h \
   /usr/include/c++/13/bits/stl_tempbuf.h \
@@ -1960,6 +1975,7 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
   /usr/include/c++/13/bits/uniform_int_dist.h \
   /usr/include/c++/13/bits/unique_lock.h \
   /usr/include/c++/13/bits/unique_ptr.h \
@@ -1985,6 +2001,7 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
+  /usr/include/c++/13/deque \
   /usr/include/c++/13/exception \
   /usr/include/c++/13/ext/aligned_buffer.h \
   /usr/include/c++/13/ext/alloc_traits.h \
@@ -2011,6 +2028,7 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
   /usr/include/c++/13/pstl/execution_defs.h \
   /usr/include/c++/13/pstl/glue_memory_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/queue \
   /usr/include/c++/13/ratio \
   /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
@@ -2018,6 +2036,7 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
   /usr/include/c++/13/system_error \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
@@ -2172,9 +2191,9 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 
 /home/ayman/ITI/Project_cpp_iti/Phases/Source/telemetry/SocketTelemetrySourceImpl.cpp:
 
-/home/ayman/ITI/Project_cpp_iti/Phases/Include/telemetry/FileTelemetrySourceImpl.hpp:
-
 /home/ayman/ITI/Project_cpp_iti/Phases/Include/telemetry/ITelemetrySource.hpp:
+
+/home/ayman/ITI/Project_cpp_iti/Phases/Include/telemetry/FileTelemetrySourceImpl.hpp:
 
 /usr/include/c++/13/fstream:
 
@@ -2244,17 +2263,29 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
 
-/usr/include/asm-generic/bitsperlong.h:
+/home/ayman/ITI/Project_cpp_iti/Phases/Source/telemetry/FileTelemetrySourceImpl.cpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+/usr/include/x86_64-linux-gnu/sys/types.h:
 
-/usr/include/c++/13/ext/concurrence.h:
+/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
-/usr/include/c++/13/cctype:
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h:
+
+/home/ayman/ITI/Project_cpp_iti/Phases/Source/sinks/ConsoleSinkImpl.cpp:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
 
 /usr/include/c++/13/debug/assertions.h:
 
 /usr/include/c++/13/ctime:
+
+/usr/include/c++/13/deque:
 
 /usr/include/c++/13/cstdio:
 
@@ -2269,6 +2300,8 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 /usr/include/c++/13/cstdint:
 
 /usr/include/c++/13/cstdlib:
+
+/usr/include/c++/13/cctype:
 
 /usr/include/c++/13/bits/stl_function.h:
 
@@ -2320,10 +2353,6 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 
 /usr/include/c++/13/cstddef:
 
-/usr/include/c++/13/bits/stl_pair.h:
-
-/usr/include/x86_64-linux-gnu/bits/errno.h:
-
 /usr/include/c++/13/bits/uses_allocator.h:
 
 /usr/include/c++/13/bits/postypes.h:
@@ -2346,9 +2375,13 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 
 /usr/include/c++/13/bits/stringfwd.h:
 
+/usr/include/c++/13/bits/this_thread_sleep.h:
+
 /usr/include/c++/13/bits/shared_ptr.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/usr/include/c++/13/bits/stl_deque.h:
 
 /usr/include/c++/13/bits/locale_facets.tcc:
 
@@ -2372,10 +2405,6 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
 
-/home/ayman/ITI/Project_cpp_iti/Phases/Source/sinks/ConsoleSinkImpl.cpp:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
-
 /usr/include/c++/13/bits/std_abs.h:
 
 /usr/include/c++/13/bits/parse_numbers.h:
@@ -2384,35 +2413,25 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 
 /usr/include/c++/13/bits/ostream.tcc:
 
-/usr/include/c++/13/bits/exception_ptr.h:
+/usr/include/c++/13/bits/move.h:
 
-/usr/include/c++/13/bits/vector.tcc:
+/usr/include/c++/13/bits/memoryfwd.h:
 
-/usr/include/c++/13/optional:
+/usr/include/c++/13/bits/stl_queue.h:
 
-/usr/include/c++/13/bits/hashtable_policy.h:
+/usr/include/c++/13/bits/requires_hosted.h:
 
-/home/ayman/ITI/Project_cpp_iti/Phases/Include/safe/SafeSocket.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
-
-/usr/include/c++/13/bits/basic_string.h:
-
-/usr/include/libintl.h:
-
-/usr/include/c++/13/bits/chrono.h:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/c++/13/bits/atomic_lockfree_defines.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
-/usr/include/c++/13/ext/numeric_traits.h:
+/usr/include/c++/13/bits/basic_string.h:
 
-/usr/include/c++/13/bits/stl_iterator.h:
+/usr/include/libintl.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+/usr/include/c++/13/atomic:
 
 /usr/include/c++/13/bits/locale_facets.h:
 
@@ -2420,19 +2439,11 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 
 /usr/include/c++/13/backward/binders.h:
 
-/usr/include/c++/13/ext/aligned_buffer.h:
+/home/ayman/ITI/Project_cpp_iti/Phases/Include/policy/RAM_policy.hpp:
 
-/usr/include/locale.h:
+/usr/include/c++/13/bits/basic_ios.tcc:
 
-/home/ayman/ITI/Project_cpp_iti/Phases/Source/sinks/FileSinkImpl.cpp:
-
-/usr/include/c++/13/bits/utility.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/include/c++/13/ext/alloc_traits.h:
-
-/usr/include/c++/13/new:
+/usr/include/c++/13/pstl/execution_defs.h:
 
 /home/ayman/ITI/Project_cpp_iti/Phases/Source/LogMessage.cpp:
 
@@ -2444,6 +2455,10 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 
 /usr/include/c++/13/bits/algorithmfwd.h:
 
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/c++/13/bits/node_handle.h:
+
 /home/ayman/ITI/Project_cpp_iti/Phases/Source/LogManager.cpp:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h:
@@ -2453,6 +2468,10 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 /usr/include/c++/13/bits/predefined_ops.h:
 
 /usr/include/c++/13/iosfwd:
+
+/usr/include/wchar.h:
+
+/usr/include/c++/13/bits/shared_ptr_base.h:
 
 /usr/include/c++/13/bits/basic_ios.h:
 
@@ -2470,6 +2489,8 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 
 /usr/include/c++/13/bits/enable_special_members.h:
 
+/home/ayman/ITI/Project_cpp_iti/Phases/Include/ThreadPool.hpp:
+
 /home/ayman/ITI/Project_cpp_iti/Phases/Include/LogMessage.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
@@ -2478,13 +2499,11 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
-/home/ayman/ITI/Project_cpp_iti/Phases/Include/policy/RAM_policy.hpp:
+/usr/include/c++/13/bits/exception_ptr.h:
 
-/usr/include/c++/13/bits/basic_ios.tcc:
+/usr/include/c++/13/bits/vector.tcc:
 
-/usr/include/c++/13/pstl/execution_defs.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
+/usr/include/c++/13/optional:
 
 /usr/include/c++/13/bits/stl_raw_storage_iter.h:
 
@@ -2495,6 +2514,12 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
 /usr/include/alloca.h:
+
+/usr/include/x86_64-linux-gnu/asm/socket.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/c++/13/cwchar:
 
 /usr/include/c++/13/backward/auto_ptr.h:
 
@@ -2514,6 +2539,20 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 
 /usr/include/c++/13/bits/codecvt.h:
 
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/c++/13/bits/chrono.h:
+
+/usr/include/c++/13/bits/hashtable_policy.h:
+
+/home/ayman/ITI/Project_cpp_iti/Phases/Include/safe/SafeSocket.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+
+/usr/include/c++/13/bits/deque.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
 /home/ayman/ITI/Project_cpp_iti/Phases/Include/safe/SafeFile.hpp:
 
 /usr/include/c++/13/bits/istream.tcc:
@@ -2532,8 +2571,6 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
-/usr/include/c++/13/bits/move.h:
-
 /usr/include/c++/13/bits/cxxabi_forced.h:
 
 /usr/include/x86_64-linux-gnu/bits/socket_type.h:
@@ -2547,6 +2584,10 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 /usr/include/c++/13/typeinfo:
 
 /usr/include/c++/13/bits/exception.h:
+
+/usr/include/c++/13/bits/memory_resource.h:
+
+/usr/include/c++/13/streambuf:
 
 /usr/include/c++/13/condition_variable:
 
@@ -2592,21 +2633,43 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 
 /usr/include/c++/13/bits/invoke.h:
 
-/usr/include/c++/13/streambuf:
+/usr/include/c++/13/bits/stl_pair.h:
 
-/usr/include/c++/13/bits/memory_resource.h:
+/usr/include/x86_64-linux-gnu/bits/errno.h:
 
-/usr/include/c++/13/bits/shared_ptr_base.h:
+/usr/include/c++/13/ext/aligned_buffer.h:
 
-/usr/include/wchar.h:
+/usr/include/locale.h:
 
-/usr/include/c++/13/bits/memoryfwd.h:
+/home/ayman/ITI/Project_cpp_iti/Phases/Source/sinks/FileSinkImpl.cpp:
+
+/usr/include/c++/13/bits/utility.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+
+/usr/include/c++/13/ext/alloc_traits.h:
+
+/usr/include/c++/13/new:
+
+/usr/include/c++/13/ext/concurrence.h:
+
+/usr/include/c++/13/bits/stl_iterator.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/c++/13/ext/numeric_traits.h:
+
+/usr/include/asm-generic/bitsperlong.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
 /usr/include/c++/13/ext/string_conversions.h:
 
 /usr/include/c++/13/ext/type_traits.h:
 
 /usr/include/c++/13/functional:
+
+/usr/include/c++/13/bits/std_thread.h:
 
 /usr/include/c++/13/initializer_list:
 
@@ -2615,6 +2678,10 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 /usr/include/c++/13/iostream:
 
 /usr/include/c++/13/istream:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/usr/include/c++/13/limits:
 
 /usr/include/c++/13/memory:
 
@@ -2632,6 +2699,12 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 
 /usr/include/c++/13/pstl/pstl_config.h:
 
+/usr/include/c++/13/queue:
+
+/usr/include/endian.h:
+
+/usr/include/stdint.h:
+
 /usr/include/c++/13/stdexcept:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
@@ -2642,13 +2715,13 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 
 /usr/include/features-time64.h:
 
+/usr/include/c++/13/thread:
+
 /usr/include/c++/13/bits/nested_exception.h:
 
 /usr/include/c++/13/tuple:
 
 /usr/include/c++/13/type_traits:
-
-/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
 /usr/include/c++/13/bits/allocator.h:
 
@@ -2674,13 +2747,7 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 
 /usr/include/sched.h:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h:
-
 /usr/include/stdc-predef.h:
-
-/usr/include/endian.h:
-
-/usr/include/stdint.h:
 
 /usr/include/c++/13/bits/stl_iterator_base_types.h:
 
@@ -2696,18 +2763,6 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/c++/13/bits/requires_hosted.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/usr/include/c++/13/limits:
-
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
@@ -2721,12 +2776,6 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
-
-/usr/include/x86_64-linux-gnu/asm/socket.h:
-
-/usr/include/c++/13/cwchar:
-
-/usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
@@ -2791,13 +2840,3 @@ CMakeFiles/ITI_cpp.dir/main.cpp.o: /home/ayman/ITI/Project_cpp_iti/Phases/main.c
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
-
-/usr/include/c++/13/bits/node_handle.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-/home/ayman/ITI/Project_cpp_iti/Phases/Source/telemetry/FileTelemetrySourceImpl.cpp:
-
-/usr/include/x86_64-linux-gnu/sys/types.h:

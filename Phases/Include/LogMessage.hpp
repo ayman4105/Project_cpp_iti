@@ -8,6 +8,7 @@
 #include "Types_of_enums_data/severity_type.hpp"
 #include "magic_enum/magic_enum.hpp"
 
+
 class LogMessage
 {
 

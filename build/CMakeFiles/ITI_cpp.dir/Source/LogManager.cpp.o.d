@@ -204,4 +204,10 @@ CMakeFiles/ITI_cpp.dir/Source/LogManager.cpp.o: \
  /home/ayman/ITI/Project_cpp_iti/Phases/Include/RingBuffer.hpp \
  /usr/include/c++/13/mutex /usr/include/c++/13/bits/std_mutex.h \
  /usr/include/c++/13/bits/unique_lock.h \
- /usr/include/c++/13/condition_variable
+ /usr/include/c++/13/condition_variable \
+ /home/ayman/ITI/Project_cpp_iti/Phases/Include/ThreadPool.hpp \
+ /usr/include/c++/13/thread /usr/include/c++/13/bits/std_thread.h \
+ /usr/include/c++/13/bits/this_thread_sleep.h /usr/include/c++/13/queue \
+ /usr/include/c++/13/deque /usr/include/c++/13/bits/stl_deque.h \
+ /usr/include/c++/13/bits/deque.tcc /usr/include/c++/13/bits/stl_queue.h \
+ /usr/include/c++/13/atomic

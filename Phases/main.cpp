@@ -7,18 +7,19 @@
 #include "Include/telemetry/FileTelemetrySourceImpl.hpp"
 #include "Include/telemetry/SocketTelemetrySourceImpl.hpp"
 #include "Include/Formatter.hpp"
+#include"ThreadPool.hpp"
 
 std::string getTelemetryValue()
 {
     static int counter = 0;
-    counter = counter + 5;
+    counter = counter + 8;
     return std::to_string(50 + counter);
 }
 
 int main()
 {
 
-    LogManager logger(10);
+    LogManager logger(2,10); // threads=2, 10 capacity
 
     logger.add_sink(std::make_unique<ConsoleSinkImpl>());
 

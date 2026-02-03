@@ -12,6 +12,7 @@ void LogManager::log(const LogMessage &message)
     {
         std::cout << "[LogManager] buffer full, message dropped\n";
     }
+    pool->push_task([this](){ this->write(); });
 }
 
 void LogManager::write()

@@ -1,7 +1,7 @@
 CMakeFiles/ITI_cpp.dir/Source/LogMessage.cpp.o: \
  /home/ayman/ITI/Project_cpp_iti/Phases/Source/LogMessage.cpp \
  /usr/include/stdc-predef.h \
- /home/ayman/ITI/Project_cpp_iti/Phases/Source/../Include/LogMessage.hpp \
+ /home/ayman/ITI/Project_cpp_iti/Phases/Include/LogMessage.hpp \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -168,8 +168,8 @@ CMakeFiles/ITI_cpp.dir/Source/LogMessage.cpp.o: \
  /usr/include/c++/13/bits/ostream.tcc \
  /usr/include/c++/13/bits/istream.tcc \
  /usr/include/c++/13/bits/sstream.tcc /usr/include/c++/13/iostream \
- /home/ayman/ITI/Project_cpp_iti/Phases/Source/../Include/Types_of_enums_data/severity_type.hpp \
- /home/ayman/ITI/Project_cpp_iti/Phases/Source/../Include/magic_enum/magic_enum.hpp \
+ /home/ayman/ITI/Project_cpp_iti/Phases/Include/Types_of_enums_data/severity_type.hpp \
+ /home/ayman/ITI/Project_cpp_iti/Phases/Include/magic_enum/magic_enum.hpp \
  /usr/include/c++/13/array /usr/include/c++/13/compare \
  /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
  /usr/include/c++/13/unordered_map \
