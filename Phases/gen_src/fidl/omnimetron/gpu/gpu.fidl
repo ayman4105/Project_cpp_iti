@@ -1,0 +1,18 @@
+package omnimetron.gpu
+
+
+interface GpuUsageData {
+    version {major 1 minor 0}
+
+    broadcast  notifyGpuUsageDataChange {
+        out {
+            Float usage    
+        }
+    }
+
+    method  requestGpuUsageData {
+        out {
+            Float usage 
+        }
+    }
+}

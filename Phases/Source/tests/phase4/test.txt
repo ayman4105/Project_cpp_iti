@@ -1,12 +1,12 @@
 #include <iostream>
-#include "Include/sinks/ConsoleSinkImpl.hpp"
-#include "Include/sinks/FileSinkImpl.hpp"
-#include "Include/sinks/ILogSink.hpp"
-#include "Include/LogManager.hpp"
-#include "Include/LogMessage.hpp"
-#include "Include/telemetry/FileTelemetrySourceImpl.hpp"
-#include "Include/telemetry/SocketTelemetrySourceImpl.hpp"
-#include "Include/Formatter.hpp"
+#include "sinks/ConsoleSinkImpl.hpp"
+#include "sinks/FileSinkImpl.hpp"
+#include "sinks/ILogSink.hpp"
+#include "LogManager.hpp"
+#include "LogMessage.hpp"
+#include "telemetry/FileTelemetrySourceImpl.hpp"
+#include "telemetry/SocketTelemetrySourceImpl.hpp"
+#include "Formatter.hpp"
 #include"ThreadPool.hpp"
 
 std::string getTelemetryValue()
