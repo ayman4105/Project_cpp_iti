@@ -666,45 +666,38 @@ Main Thread
 {
   "log_manager": {
     "buffer_capacity": 200,
-    "thread_pool_size": 2,
+    "thread_pool_size": 4,
     "sink_flush_rate_ms": 500
+  },
+  "sinks": {
+    "console": { "enabled": true },
+    "files": [
+      { "enabled": true, "path": "/home/ayman/ITI/Project_cpp_iti/Phases/logs/output.log" },
+      { "enabled": true, "path": "/home/ayman/ITI/Project_cpp_iti/Phases/logs/backup.log" }
+    ]
   },
   "sources": {
     "file": {
       "enabled": true,
-      "path": "/path/to/telemetry.log",
-      "parse_rate_ms": 1000,
+      "path": "/home/ayman/ITI/Project_cpp_iti/Phases/scripts/shell_logs.txt",
+      "parse_rate_ms": 1900,
       "policy": "cpu"
     },
     "socket": {
       "enabled": false,
       "ip": "127.0.0.1",
       "port": 12345,
-      "parse_rate_ms": 1000,
+      "parse_rate_ms": 1500,
       "policy": "ram"
     },
     "someip": {
       "enabled": false,
-      "parse_rate_ms": 1000,
+      "parse_rate_ms": 1200,
       "policy": "gpu"
     }
-  },
-  "sinks": {
-    "console": {
-      "enabled": true
-    },
-    "files": [
-      {
-        "enabled": true,
-        "path": "/var/log/telemetry.log"
-      },
-      {
-        "enabled": true,
-        "path": "/var/log/telemetry_backup.log"
-      }
-    ]
   }
 }
+
 ```
 
 ### Configuration Parameters Explained
@@ -829,3 +822,4 @@ The Telemetry Logging System provides a robust, high-performance framework for c
 - **Extensibility**: Interface-based design allows easy addition of components
 
 This architecture is suitable for embedded systems, automotive applications, and any scenario requiring high-throughput, low-latency logging of telemetry data.
+
