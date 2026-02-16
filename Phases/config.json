@@ -1,0 +1,34 @@
+{
+  "log_manager": {
+    "buffer_capacity": 200,
+    "thread_pool_size": 4,
+    "sink_flush_rate_ms": 500
+  },
+  "sinks": {
+    "console": { "enabled": true },
+    "files": [
+      { "enabled": true, "path": "/home/ayman/ITI/Project_cpp_iti/Phases/logs/output.log" },
+      { "enabled": true, "path": "./logs/backup.log" }
+    ]
+  },
+  "sources": {
+    "file": {
+      "enabled": false,
+      "path": "/home/ayman/ITI/Project_cpp_iti/Phases/scripts/shell_logs.txt",
+      "parse_rate_ms": 1900,
+      "policy": "cpu"
+    },
+    "socket": {
+      "enabled": false,
+      "ip": "127.0.0.1",
+      "port": 12345,
+      "parse_rate_ms": 1500,
+      "policy": "ram"
+    },
+    "someip": {
+      "enabled": true,
+      "parse_rate_ms": 1200,
+      "policy": "gpu"
+    }
+  }
+}
