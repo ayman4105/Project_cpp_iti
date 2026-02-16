@@ -1,9 +1,4 @@
 #include "LoggingApp.hpp"
-#include <thread>
-#include <chrono>
-#include <iostream>
-
-
 
 int main() {
     // create app with config path
