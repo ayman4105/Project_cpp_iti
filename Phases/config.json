@@ -8,12 +8,12 @@
     "console": { "enabled": true },
     "files": [
       { "enabled": true, "path": "/home/ayman/ITI/Project_cpp_iti/Phases/logs/output.log" },
-      { "enabled": true, "path": "./logs/backup.log" }
+      { "enabled": true, "path": "/home/ayman/ITI/Project_cpp_iti/Phases/logs/backup.log" }
     ]
   },
   "sources": {
     "file": {
-      "enabled": false,
+      "enabled": true,
       "path": "/home/ayman/ITI/Project_cpp_iti/Phases/scripts/shell_logs.txt",
       "parse_rate_ms": 1900,
       "policy": "cpu"
@@ -26,7 +26,7 @@
       "policy": "ram"
     },
     "someip": {
-      "enabled": true,
+      "enabled": false,
       "parse_rate_ms": 1200,
       "policy": "gpu"
     }

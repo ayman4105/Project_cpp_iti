@@ -44,5 +44,4 @@ public:
     static void signalHandler(int);
 
     ~TelemetryLoggingApp();
-
 };

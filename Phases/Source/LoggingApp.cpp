@@ -8,7 +8,7 @@
 #include <csignal>
 
 // Global pointer to handle signals
-static TelemetryLoggingApp* g_app_instance = nullptr;
+static TelemetryLoggingApp *g_app_instance = nullptr;
 
 TelemetryLoggingApp::TelemetryLoggingApp(const std::string &configPath)
 {
@@ -47,7 +47,7 @@ void TelemetryLoggingApp::loadConfig(const std::string &path)
         throw std::runtime_error("Cannot open config: " + path);
     file >> config;
 
-    buffer_capacity = config["log_manager"].value("buffer_capacity", 100);
+    buffer_capacity = config["log_manager"].value("buffer_capacity", 200);
     thread_pool_size = config["log_manager"].value("thread_pool_size", 2);
     sink_flush_rate_ms = config["log_manager"].value("sink_flush_rate_ms", 500);
 }
@@ -85,7 +85,7 @@ void TelemetryLoggingApp::setupTelemetrySources()
         std::string policy = config["sources"]["file"].value("policy", "cpu");
 
         sourceThreads.emplace_back([this, path, rate, policy]()
-        {
+            {
             auto source = std::make_unique<FileTelemetrySrc>(path);
 
             if (!source->openSource())
@@ -111,11 +111,10 @@ void TelemetryLoggingApp::setupTelemetrySources()
                 }
 
                 std::this_thread::sleep_for(std::chrono::milliseconds(rate));
-            }
-        });
+            } });
     }
 
-    // to run soket use this command nc -lk 12345 in  terminal 
+    // to run soket use this command nc -lk 12345 and add number needed to show in soket
     // SOCKET source
     if (config["sources"]["socket"].value("enabled", false))
     {
@@ -128,17 +127,17 @@ void TelemetryLoggingApp::setupTelemetrySources()
                                    {
         auto source = std::make_unique<SocketTelemetrySrc>(ip, port); // دلوقتي صح
         while (isRunning) {
-            if (source->openSource()) {
-                std::string raw;
-                if (source->readSource(raw)) {
-                    std::optional<LogMessage> msg;
-                    if (policy == "cpu") msg = Formatter<CPU_policy>::format(raw);
-                    else if (policy == "ram") msg = Formatter<RAM_policy>::format(raw);
-                    else if (policy == "gpu") msg = Formatter<GPU_policy>::format(raw);
+        if (source->openSource()) {
+            std::string raw;
+            if (source->readSource(raw)) {
+                std::optional<LogMessage> msg;
+                if (policy == "cpu") msg = Formatter<CPU_policy>::format(raw);
+                else if (policy == "ram") msg = Formatter<RAM_policy>::format(raw);
+                else if (policy == "gpu") msg = Formatter<GPU_policy>::format(raw);
 
-                    if (msg.has_value()) logger->log(msg.value());
-                }
+                if (msg.has_value()) logger->log(msg.value());
             }
+        }
             std::this_thread::sleep_for(std::chrono::milliseconds(rate));
         } });
     }
@@ -151,21 +150,21 @@ void TelemetryLoggingApp::setupTelemetrySources()
 
         sourceThreads.emplace_back([this, rate, policy]()
                                    {
-            auto &source = SomeIPTelemetrySourceImpl::instance();
-            if (!source.openSource()) return;
+        auto &source = SomeIPTelemetrySourceImpl::instance();
+        if (!source.openSource()) return;
 
-            while (isRunning) {
-                std::string raw;
-                if (source.readSource(raw)) {
-                    std::optional<LogMessage> msg;
-                    if (policy == "cpu") msg = Formatter<CPU_policy>::format(raw);
-                    else if (policy == "ram") msg = Formatter<RAM_policy>::format(raw);
-                    else if (policy == "gpu") msg = Formatter<GPU_policy>::format(raw);
+        while (isRunning) {
+            std::string raw;
+            if (source.readSource(raw)) {
+                std::optional<LogMessage> msg;
+                if (policy == "cpu") msg = Formatter<CPU_policy>::format(raw);
+                else if (policy == "ram") msg = Formatter<RAM_policy>::format(raw);
+                else if (policy == "gpu") msg = Formatter<GPU_policy>::format(raw);
 
-                    if (msg.has_value()) logger->log(msg.value());
-                }
-                std::this_thread::sleep_for(std::chrono::milliseconds(rate));
-            } });
+                if (msg.has_value()) logger->log(msg.value());
+            }
+            std::this_thread::sleep_for(std::chrono::milliseconds(rate));
+        } });
     }
 }
 
@@ -182,9 +181,10 @@ void TelemetryLoggingApp::startWriterThread()
     });
 }
 
-void TelemetryLoggingApp::signalHandler(int signal) { 
-    if (g_app_instance) 
-        g_app_instance->isRunning = false; 
+void TelemetryLoggingApp::signalHandler(int signal)
+{
+    if (g_app_instance)
+        g_app_instance->isRunning = false;
     exit(0);
 }
 
@@ -194,7 +194,7 @@ void TelemetryLoggingApp::start()
 
     // writer thread
     startWriterThread();
-    setupTelemetrySources(); 
+    setupTelemetrySources();
 
     // join all threads (blocking main)
     for (auto &t : sourceThreads)
