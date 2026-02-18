@@ -13,7 +13,7 @@
   },
   "sources": {
     "file": {
-      "enabled": true,
+      "enabled": false,
       "path": "/home/ayman/ITI/Project_cpp_iti/Phases/scripts/shell_logs.txt",
       "parse_rate_ms": 1900,
       "policy": "cpu"
@@ -26,7 +26,7 @@
       "policy": "ram"
     },
     "someip": {
-      "enabled": false,
+      "enabled": true,
       "parse_rate_ms": 1200,
       "policy": "gpu"
     }

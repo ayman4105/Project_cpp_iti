@@ -1,3 +1,0 @@
-/home/ayman/ITI/Project_cpp_iti/build/CMakeFiles/ITI_cpp.dir
-/home/ayman/ITI/Project_cpp_iti/build/CMakeFiles/edit_cache.dir
-/home/ayman/ITI/Project_cpp_iti/build/CMakeFiles/rebuild_cache.dir
