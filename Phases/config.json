@@ -28,7 +28,7 @@
     "someip": {
       "enabled": true,
       "parse_rate_ms": 1200,
-      "policy": "gpu"
+      "policy": "cpu"
     }
   }
 }
