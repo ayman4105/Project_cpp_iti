@@ -19,16 +19,16 @@
       "policy": "cpu"
     },
     "socket": {
-      "enabled": false,
-      "ip": "127.0.0.1",
+      "enabled": true,
+      "ip": "10.42.0.239",
       "port": 12345,
-      "parse_rate_ms": 1500,
+      "parse_rate_ms": 500,
       "policy": "ram"
     },
     "someip": {
-      "enabled": true,
+      "enabled": false,
       "parse_rate_ms": 1200,
-      "policy": "cpu"
+      "policy": "gpu"
     }
   }
 }

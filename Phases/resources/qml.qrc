@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file alias="main.qml">../qml/main.qml</file>
+        <file alias="GaugeWidget.qml">../qml/GaugeWidget.qml</file>
+        <file alias="LogViewer.qml">../qml/LogViewer.qml</file>
+        <file alias="SourceControls.qml">../qml/SourceControls.qml</file>
+        <file alias="StatusBar.qml">../qml/StatusBar.qml</file>
+    </qresource>
+</RCC>

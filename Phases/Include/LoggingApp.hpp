@@ -24,24 +24,28 @@ private:
     void startWriterThread();
 
     nlohmann::json config;
-    std::unique_ptr<LogManager> logger;
-
+    
     std::vector<std::unique_ptr<ILogSink>> sinks;
     std::vector<std::unique_ptr<ITelemetrySource>> sources;
     std::vector<std::thread> sourceThreads;
-
+    
     std::thread writerThread_;
     int buffer_capacity;
     int thread_pool_size;
     int sink_flush_rate_ms;
 
-    std::atomic<bool> isRunning{false};
-
 public:
+
+std::unique_ptr<LogManager> logger;
+std::atomic<bool> isRunning{false};
+    
+    
+public:
+
     explicit TelemetryLoggingApp(const std::string &configPath);
     void start();
-
+    
     static void signalHandler(int);
-
+    
     ~TelemetryLoggingApp();
 };

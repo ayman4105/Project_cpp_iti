@@ -118,14 +118,14 @@ void TelemetryLoggingApp::setupTelemetrySources()
     // SOCKET source
     if (config["sources"]["socket"].value("enabled", false))
     {
-        std::string ip = config["sources"]["socket"].value("ip", "127.0.0.1");
+        std::string ip = config["sources"]["socket"].value("ip", "10.42.0.239");
         uint16_t port = config["sources"]["socket"].value("port", 12345);
         int rate = config["sources"]["socket"].value("parse_rate_ms", 1000);
         std::string policy = config["sources"]["socket"].value("policy", "ram");
 
         sourceThreads.emplace_back([this, ip, port, rate, policy]()
                                    {
-        auto source = std::make_unique<SocketTelemetrySrc>(ip, port); // دلوقتي صح
+        auto source = std::make_unique<SocketTelemetrySrc>(ip, port); 
         while (isRunning) {
         if (source->openSource()) {
             std::string raw;
