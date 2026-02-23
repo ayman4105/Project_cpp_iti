@@ -16,7 +16,7 @@
       "enabled": false,
       "path": "/home/ayman/ITI/Project_cpp_iti/Phases/scripts/shell_logs.txt",
       "parse_rate_ms": 1900,
-      "policy": "cpu"
+      "policy": "gpu"
     },
     "socket": {
       "enabled": true,
@@ -28,7 +28,7 @@
     "someip": {
       "enabled": false,
       "parse_rate_ms": 1200,
-      "policy": "gpu"
+      "policy": "cpu"
     }
   }
 }
