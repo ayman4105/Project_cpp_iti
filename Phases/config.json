@@ -20,10 +20,10 @@
     },
     "socket": {
       "enabled": true,
-      "ip": "10.42.0.239",
+      "ip": "127.0.0.1",
       "port": 12345,
       "parse_rate_ms": 500,
-      "policy": "ram"
+      "policy": "cpu"
     },
     "someip": {
       "enabled": false,
